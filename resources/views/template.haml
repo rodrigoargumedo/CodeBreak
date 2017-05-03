@@ -1,0 +1,49 @@
+!!! 5
+%html
+  %head
+    -if block('title')
+      %title= "#{block('title')} ~ CodeBreak"
+    -else
+      %title= "CodeBreak"
+
+    %link(rel="stylesheet" href="/assets/css/style.css?v=#{version}")
+
+  %body(class="#{block('section')}")
+    %header.with-hero
+      .wrap
+        .wrap-inner
+          %section.site-title
+            %h1
+              %a(href="/")= "CodeBreak"
+            %a(href="https://srnd.org/") by StudentRND
+          %nav
+            %ul
+              %li
+                %a(href="/")= "Info"
+              %li
+                %a(href="/register")= "Register"
+              %li
+                %a(href="/mentor")= "Mentor"
+
+    .hero
+      .wrap
+        .wrap-inner #{block('hero')}
+
+      
+    .wrap
+      %section.content #{block('content')}
+
+    %footer
+      .wrap
+        .wrap-inner
+          .copyright
+            &copy; 2016-#{ null|date('Y') } <a href="https://srnd.org/">StudentRND</a>.
+          .contact
+            %a(href="mailto:contact@srnd.org") contact@srnd.org<br />
+
+    %script(src="https://use.typekit.net/wck5lid.js")
+    :javascript
+      try{Typekit.load({ async: true });}catch(e){}
+    :javascript
+      (function(t,a,l,k,u,s,e){if(!t[u]){t[u]=function(){(t[u].q=t[u].q||[]).push(arguments)},t[u].l=1*new Date();s=a.createElement(l),e=a.getElementsByTagName(l)[0];s.async=1;s.src=k;e.parentNode.insertBefore(s,e)}})(window,document,'script','//www.talkus.io/plugin.beta.js','talkus');
+      talkus('init', 'DptgxkJDNvbkLB2mX');

@@ -1,0 +1,38 @@
+-extends "template.haml"
+-block title "Register"
+-block section "register"
+-block content
+  %h2 CodeBreak Summer 2017
+  %p
+    %strong Dates:
+    June 26-July 14<br />
+    %strong Cost:
+    $12 (partially offsets our costs). <a href="mailto:contact@srnd.org">Email us for a scholarship.</a><br />
+    %strong Refunds:
+    You can receive a refund if you can't participate because you're accepted for an internship or coding school.<br />
+    %strong Prerequisites:
+    This is a highly personalized experience, so all experience levels are welcome.<br />
+    %strong Acceptance:
+    %em All students are accepted, there is no application process.
+
+  %h2 Registration Form
+  #wufoo-q96hyq01x8y5k8
+    Fill out my <a href="https://srnd.wufoo.com/forms/q96hyq01x8y5k8">online form</a>.
+  :javascript
+    var q96hyq01x8y5k8;(function(d, t) {
+    var s = d.createElement(t), options = {
+    'userName':'srnd',
+    'formHash':'q96hyq01x8y5k8',
+    'autoResize':true,
+    'height':'836',
+    'async':true,
+    'host':'wufoo.com',
+    'header':'show',
+    'defaultValues': '#{ scholarship ? 'Field437=Yes' : '' }',
+    'ssl':true};
+    s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+    s.onload = s.onreadystatechange = function() {
+    var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+    try { q96hyq01x8y5k8 = new WufooForm();q96hyq01x8y5k8.initialize(options);q96hyq01x8y5k8.display(); } catch (e) {}};
+    var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+    })(document, 'script');

@@ -1,0 +1,93 @@
+body.index
+  .hero
+    padding: 1rem
+    text-align: center
+    background-color: $color-accent
+    color: $color-white
+
+    article.lead
+      +grid-column(12)
+      margin-top: 1rem
+      margin-bottom: 2rem
+      .date
+        font-family: $font-family-header
+        text-transform: uppercase
+        margin-bottom: 0.8rem
+      h2
+        font:
+          size: 3.583rem
+          weight: 700
+        margin: 0
+      p
+        +grid-column(8)
+        +grid-push(2)
+    &:after
+      clear: both
+      content: ""
+      display: block
+
+  .details
+    +grid-column(8)
+    img
+      max-width: 100%
+      height: auto
+    .lead
+      font-size: 1.44rem
+      font-family: "proxima-nova", "Proxima Nova"
+    .what
+      li
+        padding-bottom: 1.44rem
+        strong
+          display: block
+    .what, .schedule
+      padding-top: 4rem
+    table
+      border-collapse: collapse
+      td
+        width: 20%
+        text-align: center
+        border: 1px solid $color-gray
+        padding: 0.5rem 1rem
+      thead td
+        font-weight: 700
+        border-bottom: 3px solid $color-black
+  .sidebar
+    +grid-column(4)
+    padding-top: 1rem
+    text-align: center
+    .dates
+      .date
+        display: inline-block
+        width: 4rem
+        border: 1px solid $color-accent
+        .month
+          background-color: $color-accent
+          color: $color-white
+          font-size: 1.44rem
+        .day
+          font-size: 2rem
+          font-weight: 700
+      .thru
+        display: inline
+
+    .scholarship
+      display: block
+      text-decoration: none
+      color: $color-gray
+
+    .deadlines
+      ul
+        padding: 0
+        li
+          list-style-type: none
+
+    a.apply
+      margin-top: 2rem
+      padding: 1.25rem 3rem
+      background-color: $color-accent
+      border-radius: 3px
+      display: inline-block
+      color: $color-white
+      text-decoration: none
+      .cta
+        font-size: 1.44rem
